@@ -56,7 +56,7 @@ Coming soon!
 
 ## Features
 
-- User authentication: users can create accounts, sign in, and sign out.
+- User authentication: users can create and customize accounts, sign in, and sign out.
 - Friends: users can friend other users and chat in a private chat room.
 - Chat rooms: users can create, join, and leave chat rooms.
 - Real-time messaging: users can send and receive messages in real-time using Socket.io.
