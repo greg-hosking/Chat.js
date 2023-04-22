@@ -12,7 +12,7 @@
     "server": "nodemon server/app.js",
     "client": "cd client && vite",
     "dev": "concurrently \"npm run server\" \"npm run client\"",
-    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false cd client && npm install && vite build"
+    "heroku-postbuild": "cd client && npm install && vite build"
   },
   "author": "Greg Hosking",
   "license": "ISC",
