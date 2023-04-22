@@ -122,7 +122,7 @@ setupRoutes(app);
 import { fileURLToPath } from 'url';
 import path from 'path';
 
-if (process.env.NODE_ENV === 'production') {
+if (config.server.env === 'production') {
   const __dirname = path.dirname(fileURLToPath(import.meta.url));
   app.use(express.static(path.join(__dirname, '../client/dist')));
 
