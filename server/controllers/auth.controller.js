@@ -53,7 +53,9 @@ export default {
         if (err) {
           return next(createError(500, err));
         }
-        const url = `http://localhost:3000/reset-password?token=${token}`;
+        const protocol = req.protocol;
+        const base = req.headers.host;
+        const url = `${protocol}://${base}/reset-password?token=${token}`;
         transporter.sendMail(
           {
             to: email,

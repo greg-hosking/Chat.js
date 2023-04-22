@@ -90,7 +90,9 @@ async function createUser(req, res, next) {
       if (err) {
         return next(createError(500, err));
       }
-      const url = `http://localhost:3000/verification?token=${token}`;
+      const protocol = req.protocol;
+      const base = req.headers.host;
+      const url = `${protocol}://${base}/verification?token=${token}`;
       transporter.sendMail(
         {
           to: email,
