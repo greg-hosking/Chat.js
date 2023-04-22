@@ -123,13 +123,11 @@ import { fileURLToPath } from 'url';
 import path from 'path';
 
 if (process.env.NODE_ENV === 'production') {
-  const __filename = fileURLToPath(import.meta.url);
-  const __dirname = path.dirname(__filename);
-  app.use(express.static(path.join(__dirname, 'build')));
+  const __dirname = path.dirname(fileURLToPath(import.meta.url));
+  app.use(express.static(path.join(__dirname, '../client/dist')));
+
   app.get('*', (req, res) => {
-    console.log('Serving React app...');
-    console.log('dirname: ', __dirname);
-    res.sendFile(path.join('/app/client', 'build', 'index.html'));
+    res.sendFile(path.join(__dirname, '../client/dist', 'index.html'));
   });
 } else {
   app.get('/', (req, res) => {
