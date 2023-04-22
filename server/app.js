@@ -119,6 +119,8 @@ setupRoutes(app);
 // ****************
 // Deployment Setup
 // ****************
+import path from 'path';
+
 if (process.env.NODE_ENV === 'production') {
   app.use(express.static(path.join(__dirname, 'build')));
   app.get('*', (req, res) => {
