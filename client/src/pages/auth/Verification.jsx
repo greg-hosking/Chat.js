@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
-import { useSearchParams } from 'react-router-dom';
+import { useSearchParams, useNavigate } from 'react-router-dom';
 
 export default function Verification() {
   const [loading, setLoading] = useState(true);
@@ -7,6 +7,7 @@ export default function Verification() {
 
   const [searchParams] = useSearchParams();
   const token = searchParams.get('token');
+  const navigate = useNavigate();
 
   useEffect(() => {
     async function verifyToken() {
@@ -27,7 +28,7 @@ export default function Verification() {
 
       // Wait for one second before redirecting to sign in page.
       await new Promise((resolve) => setTimeout(resolve, 1000));
-      window.location = 'http://localhost:3000/sign-in';
+      navigate('/sign-in');
     }
     if (shouldVerifyToken.current) {
       verifyToken();
