@@ -129,7 +129,7 @@ if (process.env.NODE_ENV === 'production') {
   app.get('*', (req, res) => {
     console.log('Serving React app...');
     console.log('dirname: ', __dirname);
-    res.sendFile(path.join('client', 'build', 'index.html'));
+    res.sendFile(path.join('/app/client', 'build', 'index.html'));
   });
 } else {
   app.get('/', (req, res) => {
