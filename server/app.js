@@ -127,7 +127,9 @@ if (process.env.NODE_ENV === 'production') {
   const __dirname = path.dirname(__filename);
   app.use(express.static(path.join(__dirname, 'build')));
   app.get('*', (req, res) => {
-    res.sendFile(path.join(__dirname, 'build', 'index.html'));
+    console.log('Serving React app...');
+    console.log('dirname: ', __dirname);
+    res.sendFile(path.join('client', 'build', 'index.html'));
   });
 } else {
   app.get('/', (req, res) => {
