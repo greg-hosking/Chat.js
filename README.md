@@ -12,21 +12,14 @@ To get started with Chat.js, follow these steps:
    git clone https://github.com/greg-hosking/chat.js.git
    ```
 
-2. Install front end dependencies:
+2. Install dependencies:
 
    ```
-   cd /client
    npm install
    ```
 
-3. Install back end dependencies: 
 
-   ```
-   cd /server
-   npm install
-   ```
-
-4. Set up environment variables:
+3. Set up environment variables:
 
    ```
    cp .env.example .env
@@ -34,25 +27,20 @@ To get started with Chat.js, follow these steps:
 
    Edit the `.env` file and set the values for the environment variables.
 
-5. Start the development server (front end):
+4. Start the application in development mode:
 
    ```
-   cd /client
    npm run dev
    ```
 
-6. Start the development server (back end):
-
-   ```
-   cd /server
-   npm run dev
-   ```
-
-7. Open your browser and go to `http://localhost:3000`. You should see the Chat.js application running.
+5. Your browser should automatically bring you to `http://localhost:3000`, where you should see the Chat.js application running.
 
 ## Live deployment
 
-Coming soon!
+Chat.js is currently deployed on Heroku and can be accessed at [https://chatjs.herokuapp.com](https://chatjs.herokuapp.com).
+
+The application is redeployed with every push to the `master` branch. 
+
 
 ## Features
 
