@@ -2,6 +2,9 @@
   "name": "chat.js",
   "type": "module",
   "version": "1.0.0",
+  "engines": {
+    "node": "18.x"
+  },
   "description": "Chat Room App",
   "main": "app.js",
   "scripts": {
