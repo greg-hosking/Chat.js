@@ -43,7 +43,9 @@
 /* CONTAINER STYLES */
 /* ================ */
 html,
-body {
+body,
+.public-content-container,
+.private-content-container {
   touch-action: pan-x, pan-y;
 }
 
