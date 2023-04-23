@@ -438,10 +438,8 @@ nav .nav-item:last-child {
   }
 
   .private-content-container {
-    height: calc(100vh - 100px);
     margin-left: 0;
-    padding: 1rem 3rem;
-    overflow-y: auto;
+    padding: 1rem 3rem 100px 3rem;
   }
 
   /* ============= */
