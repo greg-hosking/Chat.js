@@ -45,7 +45,7 @@
 body {
   background-color: var(--background-base);
   color: var(--text-base);
-  min-height: 100vh;
+  max-height: 100vh;
   overflow: hidden;
   overflow-y: auto;
 }
