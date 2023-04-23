@@ -39,7 +39,7 @@ To get started with Chat.js, follow these steps:
 
 Chat.js is currently deployed on Heroku and can be accessed at [https://chatjs.herokuapp.com](https://chatjs.herokuapp.com).
 
-The application is redeployed with every push to the `master` branch. 
+The application is redeployed with every push to the `production` branch. 
 
 
 ## Features
